@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fleet & Liveries | vCompany</title>
+    <style>
+        :root { --bg: #121212; --card: #1e1e1e; --accent: #0084ff; --text: #ffffff; --sub: #aaaaaa; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: var(--bg); color: var(--text); margin: 0; padding: 0; }
+        header { background: var(--card); padding: 20px; text-align: center; border-bottom: 2px solid var(--accent); }
+        h1 { margin: 0; font-size: 1.8rem; }
+        nav { display: flex; justify-content: center; gap: 15px; background: #181818; padding: 12px; flex-wrap: wrap; }
+        nav a { color: var(--text); text-decoration: none; font-weight: bold; padding: 8px 16px; border-radius: 6px; background: #2a2a2a; transition: 0.2s; }
+        nav a:hover, nav a.active { background: var(--accent); }
+        .container { max-width: 1100px; margin: 30px auto; padding: 0 20px; }
+        .fleet-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
+        .vehicle-card { background: var(--card); border-radius: 10px; overflow: hidden; border: 1px solid #333; }
+        .vehicle-card img { width: 100%; height: 180px; object-fit: cover; background: #2a2a2a; }
+        .vehicle-info { padding: 15px; }
+        .vehicle-title { font-weight: bold; font-size: 1.05rem; margin-bottom: 8px; color: #fff; }
+        .vehicle-numbers { display: inline-block; background: #2a2a2a; padding: 4px 8px; border-radius: 4px; font-size: 0.85rem; color: var(--accent); font-weight: bold; }
+        footer { text-align: center; padding: 20px; color: var(--sub); font-size: 0.85rem; margin-top: 40px; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Vehicle Fleet & Liveries</h1>
+        <p style="color: var(--sub); margin: 5px 0 0 0;">Complete list of active vehicles</p>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="liveries.html" class="active">Fleet & Liveries</a>
+        <a href="lines.html">Routes</a>
+        <a href="team.html">Management</a>
+        <a href="links.html">Links</a>
+    </nav>
+    <div class="container">
+        <div class="fleet-grid">
+            <div class="vehicle-card"><img src="IMG_5610.jpeg" alt="Solaris"><div class="vehicle-info"><div class="vehicle-title">Solaris Trollino 12 IV PMDP</div><span class="vehicle-numbers">#901 #902 #027</span></div></div>
+            <div class="vehicle-card"><img src="IMG_5609.jpeg" alt="Solaris"><div class="vehicle-info"><div class="vehicle-title">Solaris Trollino 12 IV Technical Vehicle</div><span class="vehicle-numbers">#00163</span></div></div>
+            <div class="vehicle-card"><img src="IMG_5608.jpeg" alt="Solaris"><div class="vehicle-info"><div class="vehicle-title">Solaris Trollino 12 IV Silver</div><span class="vehicle-numbers">#6261</span></div></div>
+            <div class="vehicle-card"><img src="IMG_5607.jpeg" alt="Solaris"><div class="vehicle-info"><div class="vehicle-title">Solaris Trollino 12 III PMDP</div><span class="vehicle-numbers">#717</span></div></div>
+            <div class="vehicle-card"><img src="IMG_5606.jpeg" alt="Solaris"><div class="vehicle-info"><div class="vehicle-title">Solaris Trollino 12 III Technical Vehicle</div><span class="vehicle-numbers">#718</span></div></div>
+            <div class="vehicle-card"><img src="IMG_5605.jpeg" alt="ZiU9"><div class="vehicle-info"><div class="vehicle-title">ZiU9 White</div><span class="vehicle-numbers">#910</span></div></div>
+            <div class="vehicle-card"><img src="IMG_5604.jpeg" alt="ZiU9"><div class="vehicle-info"><div class="vehicle-title">ZiU9 Technical Vehicle</div><span class="vehicle-numbers">#818</span></div></div>
+            <div class="vehicle-card"><img src="IMG_5603.jpeg" alt="Škoda"><div class="vehicle-info"><div class="vehicle-title">Škoda 14Tr PMDP</div><span class="vehicle-numbers">#1717</span></div></div>
+            <div class="vehicle-card"><img src="IMG_5602.jpeg" alt="Solaris"><div class="vehicle-info"><div class="vehicle-title">Solaris Urbino 12 III PMDP</div><span class="vehicle-numbers">#1718</span></div></div>
+            <div class="vehicle-card"><img src="IMG_5611.jpeg" alt="Solaris"><div class="vehicle-info"><div class="vehicle-title">Solaris Urbino 12 III Technical Vehicle</div><span class="vehicle-numbers">#1719</span></div></div>
+            <div class="vehicle-card"><img src="IMG_5613.jpeg" alt="Solaris"><div class="vehicle-info"><div class="vehicle-title">Solaris Urbino 12 IV PMDP</div><span class="vehicle-numbers">#1619</span></div></div>
+            <div class="vehicle-card"><img src="IMG_5612.jpeg" alt="Solaris"><div class="vehicle-info"><div class="vehicle-title">Solaris Alpino 8.6 PMDP</div><span class="vehicle-numbers">#1052</span></div></div>
+            <div class="vehicle-card"><img src="IMG_5615.jpeg" alt="Karosa"><div class="vehicle-info"><div class="vehicle-title">Karosa B951E Silver</div><span class="vehicle-numbers">#1062</span></div></div>
+            <div class="vehicle-card"><img src="IMG_5614.jpeg" alt="SOR"><div class="vehicle-info"><div class="vehicle-title">SOR BN/CN12 PMDP</div><span class="vehicle-numbers">#1064</span></div></div>
+            <div class="vehicle-card"><img src="IMG_5616.jpeg" alt="Solaris"><div class="vehicle-info"><div class="vehicle-title">Solaris Urbino 18 III Silver</div><span class="vehicle-numbers">#1063</span></div></div>
+            <div class="vehicle-card"><img src="IMG_5617.jpeg" alt="Solaris"><div class="vehicle-info"><div class="vehicle-title">Solaris Trollino 18 III PMDP</div><span class="vehicle-numbers">#1112</span></div></div>
+            <div class="vehicle-card"><img src="IMG_5618.jpeg" alt="Solaris"><div class="vehicle-info"><div class="vehicle-title">Solaris Trollino 18 IV PMDP</div><span class="vehicle-numbers">#1122</span></div></div>
+            <div class="vehicle-card"><img src="IMG_5621.jpeg" alt="Škoda"><div class="vehicle-info"><div class="vehicle-title">Škoda 15Tr PMDP</div><span class="vehicle-numbers">#2233 #2234 #223344</span></div></div>
+            <div class="vehicle-card"><img src="IMG_5622.jpeg" alt="Škoda"><div class="vehicle-info"><div class="vehicle-title">Škoda 40T PMDP</div><span class="vehicle-numbers">#9162</span></div></div>
+        </div>
+    </div>
+    <footer>Smatlina &copy; 2026 | Nid's Buses & Trams vCompany</footer>
+</body>
+</html>
