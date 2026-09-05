@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Route Network | vCompany</title>
+    <style>
+        :root { --bg: #121212; --card: #1e1e1e; --accent: #0084ff; --text: #ffffff; --sub: #aaaaaa; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: var(--bg); color: var(--text); margin: 0; padding: 0; }
+        header { background: var(--card); padding: 20px; text-align: center; border-bottom: 2px solid var(--accent); }
+        h1 { margin: 0; font-size: 1.8rem; }
+        nav { display: flex; justify-content: center; gap: 15px; background: #181818; padding: 12px; flex-wrap: wrap; }
+        nav a { color: var(--text); text-decoration: none; font-weight: bold; padding: 8px 16px; border-radius: 6px; background: #2a2a2a; transition: 0.2s; }
+        nav a:hover, nav a.active { background: var(--accent); }
+        .container { max-width: 800px; margin: 30px auto; padding: 0 20px; }
+        .section-title { font-size: 1.3rem; margin-top: 30px; border-bottom: 1px solid #333; padding-bottom: 8px; color: var(--accent); }
+        .line-card { background: var(--card); padding: 15px 20px; border-radius: 8px; margin-bottom: 12px; display: flex; align-items: center; gap: 20px; border: 1px solid #333; }
+        .line-badge { font-weight: bold; font-size: 1.2rem; min-width: 55px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 6px; }
+        .trolley { background: #e67e22; color: #fff; }
+        .bus { background: #27ae60; color: #fff; }
+        .tram { background: #c0392b; color: #fff; }
+        .line-route { font-size: 1rem; flex-grow: 1; }
+        .line-type { font-size: 0.85rem; color: var(--sub); text-transform: uppercase; letter-spacing: 0.5px; }
+        footer { text-align: center; padding: 20px; color: var(--sub); font-size: 0.85rem; margin-top: 40px; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Route Network</h1>
+        <p style="color: var(--sub); margin: 5px 0 0 0;">Official lines operated by our company</p>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="liveries.html">Fleet & Liveries</a>
+        <a href="lines.html" class="active">Routes</a>
+        <a href="team.html">Management</a>
+        <a href="links.html">Links</a>
+    </nav>
+    <div class="container">
+        
+        <div class="section-title">🚎 Trolleybus Lines</div>
+        <div class="line-card"><div class="line-badge trolley">22</div><div class="line-route">Żwiry - Dworzec Główny</div><div class="line-type">Trolleybus</div></div>
+        <div class="line-card"><div class="line-badge trolley">30</div><div class="line-route">Os. Zgody - Kochłowice</div><div class="line-type">Trolleybus</div></div>
+        <div class="line-card"><div class="line-badge trolley">31</div><div class="line-route">Rýnek Główny - Dworzec Głowny</div><div class="line-type">Trolleybus</div></div>
+        <div class="line-card"><div class="line-badge trolley">32</div><div class="line-route">Dworzec Główny - Os. Zgody - Żwiry</div><div class="line-type">Partial Trolleybus</div></div>
+
+        <div class="section-title">🚌 Bus Lines</div>
+        <div class="line-card"><div class="line-badge bus">600</div><div class="line-route">Żwiry - Kombinát - Dworzec Głowny - Lotnisko</div><div class="line-type">Bus</div></div>
+        <div class="line-card"><div class="line-badge bus">601</div><div class="line-route">Jablunkov Nádraží - Żwiry</div><div class="line-type">Bus</div></div>
+        <div class="line-card"><div class="line-badge bus">602</div><div class="line-route">Jablunkov Nádraží - Jablunkov Státní Hranice</div><div class="line-type">Bus</div></div>
+        <div class="line-card"><div class="line-badge bus">704</div><div class="line-route">Lotnisko - Rzędzin</div><div class="line-type">Bus</div></div>
+
+        <div class="section-title">🚃 Tram Lines</div>
+        <div class="line-card"><div class="line-badge tram">50</div><div class="line-route">Lotnisko - Gorka Narodowa</div><div class="line-type">Tram</div></div>
+        <div class="line-card"><div class="line-badge tram">51</div><div class="line-route">Warsawska - Rzedzin Petla</div><div class="line-type">Tram</div></div>
+        <div class="line-card"><div class="line-badge tram">52</div><div class="line-route">Warsawska - Kombinát</div><div class="line-type">Tram</div></div>
+
+    </div>
+    <footer>Petr a Honza &copy; 2026 | Nid's Buses & Trams vCompany</footer>
+</body>
+</html>
