@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Official Links | vCompany</title>
+    <style>
+        :root { --bg: #121212; --card: #1e1e1e; --accent: #0084ff; --text: #ffffff; --sub: #aaaaaa; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: var(--bg); color: var(--text); margin: 0; padding: 0; }
+        header { background: var(--card); padding: 20px; text-align: center; border-bottom: 2px solid var(--accent); }
+        h1 { margin: 0; font-size: 1.8rem; }
+        nav { display: flex; justify-content: center; gap: 15px; background: #181818; padding: 12px; flex-wrap: wrap; }
+        nav a { color: var(--text); text-decoration: none; font-weight: bold; padding: 8px 16px; border-radius: 6px; background: #2a2a2a; transition: 0.2s; }
+        nav a:hover, nav a.active { background: var(--accent); }
+        .container { max-width: 600px; margin: 30px auto; padding: 0 20px; }
+        .link-btn { display: flex; flex-direction: column; background: var(--card); padding: 18px 20px; border-radius: 10px; text-decoration: none; color: var(--text); border: 1px solid #333; margin-bottom: 15px; transition: 0.2s; }
+        .link-btn:hover { border-color: var(--accent); background: #252525; }
+        .link-title { font-weight: bold; font-size: 1.1rem; color: var(--accent); }
+        .link-desc { font-size: 0.85rem; color: var(--sub); margin-top: 4px; }
+        footer { text-align: center; padding: 20px; color: var(--sub); font-size: 0.85rem; margin-top: 40px; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Official Links</h1>
+        <p style="color: var(--sub); margin: 5px 0 0 0;">Community platforms & special access</p>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="liveries.html">Fleet & Liveries</a>
+        <a href="lines.html">Routes</a>
+        <a href="team.html">Management</a>
+        <a href="links.html" class="active">Links</a>
+    </nav>
+    <div class="container">
+        
+        <a href="https://discord.gg/q2qnjzHaJV" target="_blank" class="link-btn">
+            <span class="link-title">💬 Official Discord Server</span>
+            <span class="link-desc">Join our community for operations, shifts, and discussions.</span>
+        </a>
+
+        <a href="#" class="link-btn" style="opacity: 0.6; cursor: not-allowed;">
+            <span class="link-title">📺 YouTube Channel</span>
+            <span class="link-desc">Coming soon...</span>
+        </a>
+
+        <a href="https://discord.gg/QqTJNx2WSk" target="_blank" class="link-btn" style="border-color: #f1c40f;">
+            <span class="link-title" style="color: #f1c40f;">⭐ VIP Auto-Driver Access</span>
+            <span class="link-desc">Limited offer (only 5 uses available).</span>
+        </a>
+
+    </div>
+    <footer>Petr a Honza &copy; 2026 | Nid's Buses & Trams vCompany</footer>
+</body>
+</html>
