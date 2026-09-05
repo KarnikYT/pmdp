@@ -12,20 +12,35 @@
         nav { display: flex; justify-content: center; gap: 15px; background: #181818; padding: 12px; flex-wrap: wrap; }
         nav a { color: var(--text); text-decoration: none; font-weight: bold; padding: 8px 16px; border-radius: 6px; background: #2a2a2a; transition: 0.2s; }
         nav a:hover, nav a.active { background: var(--accent); }
+        
         .container { max-width: 1100px; margin: 30px auto; padding: 0 20px; }
+
+        /* Filter styling */
+        .filter-section { background: var(--card); padding: 20px; border-radius: 10px; border: 1px solid #333; margin-bottom: 25px; }
+        .filter-group { margin-bottom: 15px; }
+        .filter-group:last-child { margin-bottom: 0; }
+        .filter-label { font-size: 0.9rem; font-weight: bold; color: var(--sub); margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.5px; }
+        .filter-buttons { display: flex; flex-wrap: wrap; gap: 8px; }
+        .filter-btn { background: #2a2a2a; color: var(--text); border: 1px solid #444; padding: 6px 14px; border-radius: 20px; cursor: pointer; font-size: 0.85rem; font-weight: 600; transition: 0.2s; }
+        .filter-btn:hover { background: #3a3a3a; border-color: var(--accent); }
+        .filter-btn.active { background: var(--accent); border-color: var(--accent); color: #fff; }
+
         .fleet-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
-        .vehicle-card { background: var(--card); border-radius: 10px; overflow: hidden; border: 1px solid #333; }
+        .vehicle-card { background: var(--card); border-radius: 10px; overflow: hidden; border: 1px solid #333; transition: transform 0.2s, border-color 0.2s; }
+        .vehicle-card:hover { border-color: var(--accent); transform: translateY(-3px); }
         .vehicle-card img { width: 100%; height: 180px; object-fit: cover; background: #2a2a2a; }
         .vehicle-info { padding: 15px; }
         .vehicle-title { font-weight: bold; font-size: 1.05rem; margin-bottom: 8px; color: #fff; }
         .vehicle-numbers { display: inline-block; background: #2a2a2a; padding: 4px 8px; border-radius: 4px; font-size: 0.85rem; color: var(--accent); font-weight: bold; }
+        .no-results { display: none; text-align: center; grid-column: 1 / -1; padding: 40px; color: var(--sub); font-size: 1.1rem; }
+
         footer { text-align: center; padding: 20px; color: var(--sub); font-size: 0.85rem; margin-top: 40px; }
     </style>
 </head>
 <body>
     <header>
         <h1>Vehicle Fleet & Liveries</h1>
-        <p style="color: var(--sub); margin: 5px 0 0 0;">Complete list of active vehicles</p>
+        <p style="color: var(--sub); margin: 5px 0 0 0;">Filter vehicles by category and manufacturer</p>
     </header>
     <nav>
         <a href="index.html">Home</a>
@@ -34,34 +49,122 @@
         <a href="team.html">Management</a>
         <a href="links.html">Links</a>
     </nav>
-    <div class="container">
-        <div class="fleet-grid">
-            <!-- Newly Added Vehicles -->
-            <div class="vehicle-card"><img src="IMG_5624.jpeg" alt="Renault"><div class="vehicle-info"><div class="vehicle-title">Renault Citybus 18 (MAN NL) PMDP</div><span class="vehicle-numbers">#611 #612 #613 #614 #615</span></div></div>
-            <div class="vehicle-card"><img src="IMG_5623.jpeg" alt="Renault"><div class="vehicle-info"><div class="vehicle-title">Renault Citybus 12 (MAN NL) PMDP</div><span class="vehicle-numbers">#620 #621 #622 #623</span></div></div>
 
-            <!-- Existing Vehicles -->
-            <div class="vehicle-card"><img src="IMG_5610.jpeg" alt="Solaris"><div class="vehicle-info"><div class="vehicle-title">Solaris Trollino 12 IV PMDP</div><span class="vehicle-numbers">#901 #902 #027</span></div></div>
-            <div class="vehicle-card"><img src="IMG_5609.jpeg" alt="Solaris"><div class="vehicle-info"><div class="vehicle-title">Solaris Trollino 12 IV Technical Vehicle</div><span class="vehicle-numbers">#00163</span></div></div>
-            <div class="vehicle-card"><img src="IMG_5608.jpeg" alt="Solaris"><div class="vehicle-info"><div class="vehicle-title">Solaris Trollino 12 IV Silver</div><span class="vehicle-numbers">#6261</span></div></div>
-            <div class="vehicle-card"><img src="IMG_5607.jpeg" alt="Solaris"><div class="vehicle-info"><div class="vehicle-title">Solaris Trollino 12 III PMDP</div><span class="vehicle-numbers">#717</span></div></div>
-            <div class="vehicle-card"><img src="IMG_5606.jpeg" alt="Solaris"><div class="vehicle-info"><div class="vehicle-title">Solaris Trollino 12 III Technical Vehicle</div><span class="vehicle-numbers">#718</span></div></div>
-            <div class="vehicle-card"><img src="IMG_5605.jpeg" alt="ZiU9"><div class="vehicle-info"><div class="vehicle-title">ZiU9 White</div><span class="vehicle-numbers">#910</span></div></div>
-            <div class="vehicle-card"><img src="IMG_5604.jpeg" alt="ZiU9"><div class="vehicle-info"><div class="vehicle-title">ZiU9 Technical Vehicle</div><span class="vehicle-numbers">#818</span></div></div>
-            <div class="vehicle-card"><img src="IMG_5603.jpeg" alt="Škoda"><div class="vehicle-info"><div class="vehicle-title">Škoda 14Tr PMDP</div><span class="vehicle-numbers">#1717</span></div></div>
-            <div class="vehicle-card"><img src="IMG_5602.jpeg" alt="Solaris"><div class="vehicle-info"><div class="vehicle-title">Solaris Urbino 12 III PMDP</div><span class="vehicle-numbers">#1718</span></div></div>
-            <div class="vehicle-card"><img src="IMG_5611.jpeg" alt="Solaris"><div class="vehicle-info"><div class="vehicle-title">Solaris Urbino 12 III Technical Vehicle</div><span class="vehicle-numbers">#1719</span></div></div>
-            <div class="vehicle-card"><img src="IMG_5613.jpeg" alt="Solaris"><div class="vehicle-info"><div class="vehicle-title">Solaris Urbino 12 IV PMDP</div><span class="vehicle-numbers">#1619</span></div></div>
-            <div class="vehicle-card"><img src="IMG_5612.jpeg" alt="Solaris"><div class="vehicle-info"><div class="vehicle-title">Solaris Alpino 8.6 PMDP</div><span class="vehicle-numbers">#1052</span></div></div>
-            <div class="vehicle-card"><img src="IMG_5615.jpeg" alt="Karosa"><div class="vehicle-info"><div class="vehicle-title">Karosa B951E Silver</div><span class="vehicle-numbers">#1062</span></div></div>
-            <div class="vehicle-card"><img src="IMG_5614.jpeg" alt="SOR"><div class="vehicle-info"><div class="vehicle-title">SOR BN/CN12 PMDP</div><span class="vehicle-numbers">#1064</span></div></div>
-            <div class="vehicle-card"><img src="IMG_5616.jpeg" alt="Solaris"><div class="vehicle-info"><div class="vehicle-title">Solaris Urbino 18 III Silver</div><span class="vehicle-numbers">#1063</span></div></div>
-            <div class="vehicle-card"><img src="IMG_5617.jpeg" alt="Solaris"><div class="vehicle-info"><div class="vehicle-title">Solaris Trollino 18 III PMDP</div><span class="vehicle-numbers">#1112</span></div></div>
-            <div class="vehicle-card"><img src="IMG_5618.jpeg" alt="Solaris"><div class="vehicle-info"><div class="vehicle-title">Solaris Trollino 18 IV PMDP</div><span class="vehicle-numbers">#1122</span></div></div>
-            <div class="vehicle-card"><img src="IMG_5621.jpeg" alt="Škoda"><div class="vehicle-info"><div class="vehicle-title">Škoda 15Tr PMDP</div><span class="vehicle-numbers">#2233 #2234 #223344</span></div></div>
-            <div class="vehicle-card"><img src="IMG_5622.jpeg" alt="Škoda"><div class="vehicle-info"><div class="vehicle-title">Škoda 40T PMDP</div><span class="vehicle-numbers">#9162</span></div></div>
+    <div class="container">
+        <!-- Interactive Filters -->
+        <div class="filter-section">
+            <div class="filter-group">
+                <div class="filter-label">Vehicle Type:</div>
+                <div class="filter-buttons" id="type-filters">
+                    <button class="filter-btn active" data-type="all">All Types</button>
+                    <button class="filter-btn" data-type="bus">Buses</button>
+                    <button class="filter-btn" data-type="trolleybus">Trolleybuses</button>
+                    <button class="filter-btn" data-type="tram">Trams</button>
+                </div>
+            </div>
+            <div class="filter-group">
+                <div class="filter-label">Brand / Manufacturer:</div>
+                <div class="filter-buttons" id="brand-filters">
+                    <button class="filter-btn active" data-brand="all">All Brands</button>
+                    <button class="filter-btn" data-brand="solaris">Solaris</button>
+                    <button class="filter-btn" data-brand="skoda">Škoda</button>
+                    <button class="filter-btn" data-brand="renault">Renault</button>
+                    <button class="filter-btn" data-brand="ziu">ZiU</button>
+                    <button class="filter-btn" data-brand="karosa">Karosa</button>
+                    <button class="filter-btn" data-brand="sor">SOR</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Fleet Cards Grid -->
+        <div class="fleet-grid" id="fleet-grid">
+            
+            <!-- Renault -->
+            <div class="vehicle-card" data-type="bus" data-brand="renault"><img src="IMG_5624.jpeg" alt="Renault"><div class="vehicle-info"><div class="vehicle-title">Renault Citybus 18 (MAN NL) PMDP</div><span class="vehicle-numbers">#611 #612 #613 #614 #615</span></div></div>
+            <div class="vehicle-card" data-type="bus" data-brand="renault"><img src="IMG_5623.jpeg" alt="Renault"><div class="vehicle-info"><div class="vehicle-title">Renault Citybus 12 (MAN NL) PMDP</div><span class="vehicle-numbers">#620 #621 #622 #623</span></div></div>
+
+            <!-- Trolleybuses -->
+            <div class="vehicle-card" data-type="trolleybus" data-brand="solaris"><img src="IMG_5610.jpeg" alt="Solaris"><div class="vehicle-info"><div class="vehicle-title">Solaris Trollino 12 IV PMDP</div><span class="vehicle-numbers">#901 #902 #027</span></div></div>
+            <div class="vehicle-card" data-type="trolleybus" data-brand="solaris"><img src="IMG_5609.jpeg" alt="Solaris"><div class="vehicle-info"><div class="vehicle-title">Solaris Trollino 12 IV Technical Vehicle</div><span class="vehicle-numbers">#00163</span></div></div>
+            <div class="vehicle-card" data-type="trolleybus" data-brand="solaris"><img src="IMG_5608.jpeg" alt="Solaris"><div class="vehicle-info"><div class="vehicle-title">Solaris Trollino 12 IV Silver</div><span class="vehicle-numbers">#6261</span></div></div>
+            <div class="vehicle-card" data-type="trolleybus" data-brand="solaris"><img src="IMG_5607.jpeg" alt="Solaris"><div class="vehicle-info"><div class="vehicle-title">Solaris Trollino 12 III PMDP</div><span class="vehicle-numbers">#717</span></div></div>
+            <div class="vehicle-card" data-type="trolleybus" data-brand="solaris"><img src="IMG_5606.jpeg" alt="Solaris"><div class="vehicle-info"><div class="vehicle-title">Solaris Trollino 12 III Technical Vehicle</div><span class="vehicle-numbers">#718</span></div></div>
+            <div class="vehicle-card" data-type="trolleybus" data-brand="solaris"><img src="IMG_5617.jpeg" alt="Solaris"><div class="vehicle-info"><div class="vehicle-title">Solaris Trollino 18 III PMDP</div><span class="vehicle-numbers">#1112</span></div></div>
+            <div class="vehicle-card" data-type="trolleybus" data-brand="solaris"><img src="IMG_5618.jpeg" alt="Solaris"><div class="vehicle-info"><div class="vehicle-title">Solaris Trollino 18 IV PMDP</div><span class="vehicle-numbers">#1122</span></div></div>
+
+            <div class="vehicle-card" data-type="trolleybus" data-brand="ziu"><img src="IMG_5605.jpeg" alt="ZiU9"><div class="vehicle-info"><div class="vehicle-title">ZiU9 White</div><span class="vehicle-numbers">#910</span></div></div>
+            <div class="vehicle-card" data-type="trolleybus" data-brand="ziu"><img src="IMG_5604.jpeg" alt="ZiU9"><div class="vehicle-info"><div class="vehicle-title">ZiU9 Technical Vehicle</div><span class="vehicle-numbers">#818</span></div></div>
+
+            <div class="vehicle-card" data-type="trolleybus" data-brand="skoda"><img src="IMG_5603.jpeg" alt="Škoda"><div class="vehicle-info"><div class="vehicle-title">Škoda 14Tr PMDP</div><span class="vehicle-numbers">#1717</span></div></div>
+            <div class="vehicle-card" data-type="trolleybus" data-brand="skoda"><img src="IMG_5621.jpeg" alt="Škoda"><div class="vehicle-info"><div class="vehicle-title">Škoda 15Tr PMDP</div><span class="vehicle-numbers">#2233 #2234 #223344</span></div></div>
+
+            <!-- Buses -->
+            <div class="vehicle-card" data-type="bus" data-brand="solaris"><img src="IMG_5602.jpeg" alt="Solaris"><div class="vehicle-info"><div class="vehicle-title">Solaris Urbino 12 III PMDP</div><span class="vehicle-numbers">#1718</span></div></div>
+            <div class="vehicle-card" data-type="bus" data-brand="solaris"><img src="IMG_5611.jpeg" alt="Solaris"><div class="vehicle-info"><div class="vehicle-title">Solaris Urbino 12 III Technical Vehicle</div><span class="vehicle-numbers">#1719</span></div></div>
+            <div class="vehicle-card" data-type="bus" data-brand="solaris"><img src="IMG_5613.jpeg" alt="Solaris"><div class="vehicle-info"><div class="vehicle-title">Solaris Urbino 12 IV PMDP</div><span class="vehicle-numbers">#1619</span></div></div>
+            <div class="vehicle-card" data-type="bus" data-brand="solaris"><img src="IMG_5612.jpeg" alt="Solaris"><div class="vehicle-info"><div class="vehicle-title">Solaris Alpino 8.6 PMDP</div><span class="vehicle-numbers">#1052</span></div></div>
+            <div class="vehicle-card" data-type="bus" data-brand="solaris"><img src="IMG_5616.jpeg" alt="Solaris"><div class="vehicle-info"><div class="vehicle-title">Solaris Urbino 18 III Silver</div><span class="vehicle-numbers">#1063</span></div></div>
+
+            <div class="vehicle-card" data-type="bus" data-brand="karosa"><img src="IMG_5615.jpeg" alt="Karosa"><div class="vehicle-info"><div class="vehicle-title">Karosa B951E Silver</div><span class="vehicle-numbers">#1062</span></div></div>
+            <div class="vehicle-card" data-type="bus" data-brand="sor"><img src="IMG_5614.jpeg" alt="SOR"><div class="vehicle-info"><div class="vehicle-title">SOR BN/CN12 PMDP</div><span class="vehicle-numbers">#1064</span></div></div>
+
+            <!-- Trams -->
+            <div class="vehicle-card" data-type="tram" data-brand="skoda"><img src="IMG_5622.jpeg" alt="Škoda"><div class="vehicle-info"><div class="vehicle-title">Škoda 40T PMDP</div><span class="vehicle-numbers">#9162</span></div></div>
+
+            <div class="no-results" id="no-results">No vehicles match the selected filters.</div>
         </div>
     </div>
-    <footer>Smatlina &copy; 2026 | Nid's Buses & Trams vCompany</footer>
+
+    <footer>Petr a Honza &copy; 2026 | Nid's Buses & Trams vCompany</footer>
+
+    <!-- Filter Logic Script -->
+    <script>
+        let selectedType = 'all';
+        let selectedBrand = 'all';
+
+        const typeButtons = document.querySelectorAll('#type-filters .filter-btn');
+        const brandButtons = document.querySelectorAll('#brand-filters .filter-btn');
+        const cards = document.querySelectorAll('.vehicle-card');
+        const noResults = document.getElementById('no-results');
+
+        function filterVehicles() {
+            let visibleCount = 0;
+
+            cards.forEach(card => {
+                const cardType = card.getAttribute('data-type');
+                const cardBrand = card.getAttribute('data-brand');
+
+                const matchesType = (selectedType === 'all' || cardType === selectedType);
+                const matchesBrand = (selectedBrand === 'all' || cardBrand === selectedBrand);
+
+                if (matchesType && matchesBrand) {
+                    card.style.display = 'block';
+                    visibleCount++;
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+
+            noResults.style.display = visibleCount === 0 ? 'block' : 'none';
+        }
+
+        typeButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                typeButtons.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                selectedType = btn.getAttribute('data-type');
+                filterVehicles();
+            });
+        });
+
+        brandButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                brandButtons.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                selectedBrand = btn.getAttribute('data-brand');
+                filterVehicles();
+            });
+        });
+    </script>
 </body>
 </html>
